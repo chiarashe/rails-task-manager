@@ -1,0 +1,16 @@
+
+<div class="container w-50 text-center">
+<h1>My Tasks</h1>
+
+<div class="tasks text-center">
+<ul class="list-group text-decoration-none">
+  <% @tasks.each do |task| %>
+    <li class="list-group-item"> <button type="button" class="btn btn-outline-info"><%= link_to task.title, task_path(task), class:"text-decoration-none text-dark"%></button>
+    <button type="button" class="btn btn-dark"><%= link_to "Delete", task_path(task), class:"text-decoration-none text-white", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%></button> </li>
+  <% end %>
+</ul>
+</div>
+<div class="mt-20">
+<%= link_to "add a new task", tasks_new_path, class:"text-decoration-none"%>
+</div>
+</div>

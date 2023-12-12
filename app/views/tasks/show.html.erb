@@ -1,0 +1,9 @@
+<div class="containter p-4">
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<p><%= @task.completed %></p>
+
+<button type="button" class="btn btn-light text-decoration-none"><%= link_to "go back", tasks_path%></button>
+<button type="button" class="btn btn-info"><%= link_to "edit task", edit_task_path%></button>
+
+</div>
